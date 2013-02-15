@@ -6,6 +6,7 @@ Myrails::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.logger = Logger.new STDOUT
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
 
@@ -18,7 +19,7 @@ Myrails::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
-
+  config.log_level = :debug
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 

@@ -5,7 +5,10 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: myrails_development
+      database: myrailsss_development  #1 lakh records
+      #database: myrailsff_development  #50k records
+      #database: myrailsf_development   #25k records
+      #database: myrailst_development    #10k records
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
