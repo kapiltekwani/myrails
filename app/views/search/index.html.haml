@@ -1,0 +1,7 @@
+.row-fluid{:style => 'padding-bottom:5px'}
+  %h4
+    Enter the Query Parameter
+  = form_tag :url => search_path, :method => :get, :class => 'form-search' do
+    = text_field_tag :query, params[:query], :class => 'input-xxlarge search-query'
+    = submit_tag "Search", :class => 'btn btn-primary'
+= render :partial => 'customers'

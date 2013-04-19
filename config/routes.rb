@@ -12,7 +12,10 @@ Myrails::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+  match '/search' => "search#index", :via => [:get, :post]  
+  resources :customers do
+    resources :orders
+  end
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -48,7 +51,7 @@ Myrails::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'customers#index'
 
   # See how all your routes lay out with "rake routes"
 

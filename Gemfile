@@ -8,8 +8,8 @@ gem 'mongoid'
 gem 'less-rails'
 gem 'simple_form'
 gem 'devise_invitable'
-gem 'jquery-datatables-rails'
 gem 'faker'
+gem 'tire'
 #gem 'populator'
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,6 +18,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'twitter-bootstrap-rails'
 
+  gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+  gem 'jquery-ui-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem 'therubyracer'
@@ -26,6 +28,7 @@ end
 
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'mina', :git => 'git://github.com/nadarei/mina.git'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,0 +1,23 @@
+!!!
+%html{:lang => :en}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Myrails
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .navbar
+      .navbar-inner
+        .container-fluid
+        = link_to "Test App", "#", :class => "brand"
+        %ul.nav
+          %li= link_to "Tab 1", "#", :class => "active"
+          %li= link_to "Tab 2", "#"
+          %li= link_to "Tab 3", "#"
+    .container
+      .content
+        .span2
+        .span10  
+          = yield
