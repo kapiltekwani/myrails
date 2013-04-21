@@ -35,4 +35,9 @@ Myrails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  ENV['CONSUMER_KEY'] = "VcG0NKfCbrwP6Vj5N6xlQ"
+  ENV['CONSUMER_SECRET'] = "9TH9oRHk75jcTA49ngnBoiDZaJ7uTWC17z0xVT9WV8c"
 end

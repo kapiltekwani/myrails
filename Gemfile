@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'devise_invitable'
 gem 'faker'
 gem 'tire'
+#gem 'html2haml'
 #gem 'populator'
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,7 +29,9 @@ end
 
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'html2haml'
 gem 'mina', :git => 'git://github.com/nadarei/mina.git'
+gem 'omniauth'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
