@@ -32,6 +32,7 @@ gem 'haml-rails'
 gem 'html2haml'
 gem 'mina', :git => 'git://github.com/nadarei/mina.git'
 gem 'omniauth'
+gem 'omniauth-twitter'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

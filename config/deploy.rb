@@ -11,7 +11,7 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 #   branch       - Branch name to deploy. (needed by mina/git)
 set :user, 'ubuntu'
 set :domain, 'ec2-54-244-98-18.us-west-2.compute.amazonaws.com'
-set :deploy_to, 'home/ubuntu/development'
+set :deploy_to, '/home/ubuntu/development'
 set :repository, 'git@github.com:kapiltekwani/myrails.git'
 set :branch, 'master'
 set :identity_file, '~/.ssh/myrails.pem'
@@ -38,6 +38,7 @@ end
 # For Rails apps, we'll make some of the shared paths that are shared between
 # all releases.
 task :setup => :environment do
+  
   queue! %[mkdir -p "#{deploy_to}/shared/log"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]
 
@@ -50,8 +51,8 @@ task :setup => :environment do
   queue! %[mkdir -p "#{deploy_to}/shared/public/system"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/public/system"]
   
-  queue! %[touch "#{deploy_to}/shared/config/database.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
+  queue! %[touch "#{deploy_to}/shared/config/mongoid.yml"]
+  queue  %[echo "-----> Be sure to edit 'shared/config/mongoid.yml'."]
 end
 
 desc "Deploys the current version to the server."

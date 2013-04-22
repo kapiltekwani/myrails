@@ -1,6 +1,10 @@
 Myrails::Application.routes.draw do
-  devise_for :users
+  resources :authentications
 
+
+  devise_for :users
+  
+  match '/auth/:provider/callback' => "authentications#create"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

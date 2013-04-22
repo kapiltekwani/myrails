@@ -37,4 +37,15 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+
+  has_one :authentication, :dependent => :destroy
+
+  def apply_omniauth(user_hash)
+    self.username = user_hash.info.name
+    self.email = user_hash.info.email
+    password = Devise.friendly_token
+    self.password = password
+    self.password_confirmation = password
+    self
+  end
 end
