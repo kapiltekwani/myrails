@@ -1,7 +1,7 @@
 class Customer
   include Mongoid::Document
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
+  #include Tire::Model::Search
+  #include Tire::Model::Callbacks
   
   field :name, type: String
   field :email, type: String

@@ -9,7 +9,7 @@ gem 'less-rails'
 gem 'simple_form'
 gem 'devise_invitable'
 gem 'faker'
-gem 'tire'
+#gem 'tire'
 #gem 'html2haml'
 #gem 'populator'
 # Gems used only for assets and not required
