@@ -11,6 +11,5 @@
  *= require_self
  *= require_tree .
  *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
- *= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
  *= require dataTables/jquery.dataTables
  */
