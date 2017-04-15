@@ -15,11 +15,11 @@ gem 'faker'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails' 
+  gem 'coffee-rails'
   gem 'twitter-bootstrap-rails'
 
-  gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+  gem 'jquery-datatables-rails'
   gem 'jquery-ui-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -27,6 +27,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'test-unit'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'html2haml'

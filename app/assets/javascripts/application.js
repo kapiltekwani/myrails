@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
 //= require twitter/bootstrap
 //= require dataTables/jquery.dataTables
-//= require dataTables/jquery.dataTables.bootstrap
 //= require_tree .
 
 $('.datatable').dataTable({
