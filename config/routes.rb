@@ -22,6 +22,8 @@ Myrails::Application.routes.draw do
   resources :customers do
     resources :orders
   end
+
+  resources :object_states
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -57,7 +59,7 @@ Myrails::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'customers#index'
+   root :to => 'object_states#index'
 
   # See how all your routes lay out with "rake routes"
 

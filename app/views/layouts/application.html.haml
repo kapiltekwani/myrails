@@ -13,9 +13,6 @@
         .container-fluid
           = link_to "Test App", "#", :class => "brand"
           %ul.nav
-            %li= link_to "Tab 1", "#", :class => "active"
-            %li= link_to "Tab 2", "#"
-            %li= link_to "Tab 3", "#"
           - if user_signed_in?
             %ul.nav.nav-pills.pull-right
               %li.dropdown

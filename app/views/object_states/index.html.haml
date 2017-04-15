@@ -1,0 +1,26 @@
+.row-fluid{:style => 'padding-bottom:5px'}
+  %h4
+    List Of Object States
+    = link_to "Upload CSV", "#", :class => "btn btn-primary", :style => 'float:right'
+.row-fluid
+  %table.table.table-striped.table-condensed.table-bordered#guest
+    %thead
+      %th.span2
+        ID
+      %th.span2
+        Type
+      %th.span4
+        TimeStamp
+      %th.span8
+        Changes
+      %th
+        Actions 
+    %tbody
+      = render :partial => 'object_state', :collection => @object_states
+:javascript
+  $('#guest').dataTable({
+  "sPaginationType": "full_numbers",
+  "aLengthMenu": [10,20,50],
+  "iDisplayLength": 50
+  });
+
