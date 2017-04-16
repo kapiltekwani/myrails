@@ -1,4 +1,4 @@
-class CsvUploader < CarrierWave::Uploader::Base
+class FileUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick  
 
   def cache_dir
@@ -8,6 +8,5 @@ class CsvUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %w(csv)
   end
-
 end
 

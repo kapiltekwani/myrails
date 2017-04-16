@@ -24,6 +24,8 @@ Myrails::Application.routes.draw do
   end
 
   resources :object_states
+  
+  resources :reports
   # Sample resource route with options:
   #   resources :products do
   #     member do

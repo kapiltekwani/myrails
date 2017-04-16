@@ -1,7 +1,8 @@
 .row-fluid{:style => 'padding-bottom:5px'}
   %h4
     List Of Object States
-    = link_to "Upload CSV", "#", :class => "btn btn-primary", :style => 'float:right'
+    = link_to "Upload CSV", "#myModal", :class => "btn btn-primary", :style => 'float:right', :"data-toggle" => "modal"
+%br 
 .row-fluid
   %table.table.table-striped.table-condensed.table-bordered#guest
     %thead
@@ -17,6 +18,8 @@
         Actions 
     %tbody
       = render :partial => 'object_state', :collection => @object_states
+= render :partial => "reports/file_upload"
+
 :javascript
   $('#guest').dataTable({
   "sPaginationType": "full_numbers",
