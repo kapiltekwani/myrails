@@ -78,3 +78,16 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
+production:
+  sessions:
+    default:
+      uri: ENV['DB_CONFIG']
+      options:
+        consistency: :strong
+        max_retries: 30
+        safe: true
+        timeout: 15
+        refresh_interval: 10
+        # In the test environment we lower the retries and retry interval to
+        # low amounts for fast failures.
+
