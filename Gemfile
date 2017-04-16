@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.5'
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
@@ -29,15 +29,12 @@ group :assets do
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'rails_12factor'
 gem 'test-unit'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'html2haml'
 gem 'mina', :git => 'git://github.com/nadarei/mina.git'
-gem 'omniauth'
-gem 'omniauth-twitter'
-gem 'koala'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
