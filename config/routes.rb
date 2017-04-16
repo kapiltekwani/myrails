@@ -18,12 +18,12 @@ Myrails::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  match '/search' => "search#index", :via => [:get, :post]  
-  resources :customers do
-    resources :orders
-  end
 
-  resources :object_states
+  resources :object_states do
+    collection do 
+      post :search
+    end
+  end
   
   resources :reports
   # Sample resource route with options:

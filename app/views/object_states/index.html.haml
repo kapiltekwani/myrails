@@ -1,7 +1,8 @@
 .row-fluid{:style => 'padding-bottom:5px'}
   %h4
     List Of Object States
-    = link_to "Upload CSV", "#myModal", :class => "btn btn-primary", :style => 'float:right', :"data-toggle" => "modal"
+    = link_to "Upload CSV", "#myModal", :class => "btn btn-success", :style => 'float:right', :"data-toggle" => "modal"
+    = link_to "Search Object State", "#mySearchModal", :class => "btn btn-info", :style => 'float:right; margin-right:10px', :"data-toggle" => "modal"
 %br 
 .row-fluid
   %table.table.table-striped.table-condensed.table-bordered#guest
@@ -19,6 +20,7 @@
     %tbody
       = render :partial => 'object_state', :collection => @object_states
 = render :partial => "reports/file_upload"
+= render :partial => "search_box"
 
 :javascript
   $('#guest').dataTable({
