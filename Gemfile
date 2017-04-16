@@ -33,19 +33,8 @@ gem 'rails_12factor'
 gem 'test-unit'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'html2haml'
 gem 'mina', :git => 'git://github.com/nadarei/mina.git'
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'koala'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
