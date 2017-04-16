@@ -4,7 +4,7 @@ class ReportsController < ApplicationController
     if @report.save
       redirect_to object_states_path
     else
-     :
+    
     end
   end
   
