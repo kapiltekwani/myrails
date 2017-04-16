@@ -1,8 +1,0 @@
-= simple_form_for @customer, :html => {:class => 'form-horizontal', :multipart => 'true'} do |f|
-  .control-group
-    = f.input :name
-    = f.input :email
-    = f.file_field :csv_file
-  .controls
-    = f.button :submit, :class => 'btn btn-primary'
-    = link_to "Cancel", customers_path, :class => 'btn'
