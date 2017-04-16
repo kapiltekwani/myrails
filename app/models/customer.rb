@@ -5,7 +5,6 @@ class Customer
   
   field :name, type: String
   field :email, type: String
-  mount_uploader :csv_file, CsvUploader 
   
   has_many :orders
 
