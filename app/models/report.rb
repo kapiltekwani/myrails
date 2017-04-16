@@ -3,6 +3,9 @@ class Report
 
   mount_uploader :file, FileUploader
 
+  validates :file, file_size: { less_than_or_equal_to: 2.megabytes },
+                     file_content_type: { allow: ['text/csv'] } 
+
   after_save :process_file
 
   def process_file

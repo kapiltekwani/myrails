@@ -12,6 +12,7 @@ gem 'faker'
 gem 'carrierwave'
 gem 'carrierwave-mongoid'
 gem "rmagick"
+gem 'file_validators'
 #gem 'tire'
 #gem 'html2haml'
 #gem 'populator'

@@ -2,12 +2,11 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(params[:report])
     if @report.save
-      redirect_to object_states_path
+      flash[:notice] = "CSV uploaded successfully"
     else
-    
+      flash[:danger] = @report.errors.full_messages.join(',')
     end
-  end
-  
-  def index 
+    
+    redirect_to object_states_path
   end
 end

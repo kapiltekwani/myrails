@@ -81,7 +81,7 @@ test:
 production:
   sessions:
     default:
-      uri: ENV['MONGODB_URI']
+      uri: <%= ENV['MONGODB_URI'] %>
       options:
         consistency: :strong
         max_retries: 30
