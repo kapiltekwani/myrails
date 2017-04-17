@@ -7,20 +7,9 @@ class ObjectState
   field :object_changes, type: String
   field :timestamp, type: DateTime  
 
-  #mount_uploader :csv_file, CsvUploader 
+  attr_accessible :object_id, :object_type, :timestamp, :object_changes
 
-  validates :object_id,:object_type, :timestamp, :object_changes, presence: true
+  validates :object_id, :object_type, :timestamp, :object_changes, presence: true
 
-  attr_accessible :object_id,:object_type, :timestamp, :object_changes
-
-  def self.import(file_path)
-    CSV.parse(File.read(file_path).gsub(/\\"/,'""'), :headers => true).each do |row|
-
-      previous_object_state = ObjectState.where(object_id: row["object_id"], object_type: row["object_type"]).order_by(:timestamp => 'desc').first
-
-      row["object_changes"] = (JSON.parse(previous_object_state.object_changes).merge(JSON.parse(row["object_changes"]))).to_json if previous_object_state
-      
-      current_object_state = ObjectState.create(object_id: row["object_id"], object_type: row["object_type"], timestamp: DateTime.strptime(row["timestamp"],'%s'), object_changes: row["object_changes"])
-    end
-  end
+  validates :object_id, numericality: { only_integer: true }
 end
